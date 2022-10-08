@@ -1,10 +1,12 @@
 extends ../../layouts/layout
-include ../../components/btn/btn.pug
+include ../../components/btn/btn
+include ../../components/info-box/info-box
 
 block variables
   - const btnText = 'Оставить заявку'
-
 block title
   title Home
 block main
   +btn(btnText)
+  +info-box({infoBoxTitle:'Сумма договора лизинга',infoBoxValue:"4 467 313 ₽"})
+  

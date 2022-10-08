@@ -1,0 +1,28 @@
+@use '../../styles/vars.scss';
+@use '../../styles/mixins.scss';
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__value {
+    font: 900 54px vars.$nekstFont;
+    line-height: 90%;
+    color: vars.$blackTextColor;
+  }
+  &-sm {
+    .info-box {
+      &__title {
+        font-size: 14px;
+        line-height: 136%;  
+      }
+      &__value {
+        font-size: 22px;
+        line-height: 20px;
+      }
+    }
+  }
+}
