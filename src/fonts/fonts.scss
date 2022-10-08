@@ -1,0 +1,56 @@
+//Gilroy
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+      url('./Gilroy/Gilroy-Regular.woff2') format('woff2'),
+      url('./Gilroy/Gilroy-Regular.woff') format('woff'),
+      url('./Gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Bold'), local('Gilroy-Bold'),
+      url('./Gilroy/Gilroy-Bold.woff2') format('woff2'),
+      url('./Gilroy/Gilroy-Bold.woff') format('woff'),
+      url('./Gilroy/Gilroy-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Black'), local('Gilroy-Black'),
+      url('./Gilroy/Gilroy-Black.woff2') format('woff2'),
+      url('./Gilroy/Gilroy-Black.woff') format('woff'),
+      url('./Gilroy/Gilroy-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+//Nekst
+@font-face {
+  font-family: 'Nekst';
+  src: local('Nekst'), local('Nekst-Regular'),
+      url('./Nekst/Nekst-Regular.woff2') format('woff2'),
+      url('./Nekst/Nekst-Regular.woff') format('woff'),
+      url('./Nekst/Nekst-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nekst';
+  src: local('Nekst Bold'), local('Nekst-Bold'),
+      url('./Nekst/Nekst-Bold.woff2') format('woff2'),
+      url('./Nekst/Nekst-Bold.woff') format('woff'),
+      url('./Nekst/Nekst-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nekst';
+  src: local('Nekst Black'), local('Nekst-Black'),
+      url('./Nekst/Nekst-Black.woff2') format('woff2'),
+      url('./Nekst/Nekst-Black.woff') format('woff'),
+      url('./Nekst/Nekst-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
