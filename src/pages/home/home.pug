@@ -1,8 +1,10 @@
 extends ../../layouts/layout
+include ../../components/btn/btn.pug
 
 block variables
+  - const btnText = 'Оставить заявку'
 
 block title
   title Home
 block main
-  |Home
+  +btn(btnText)

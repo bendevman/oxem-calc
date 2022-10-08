@@ -2,6 +2,7 @@
 
 html {
   color: vars.$mainTextColor;
-  font: 400 14px Gilroy, Areal, sans-serif;
+  font: 400 14px vars.$gilroyFont;
   background: #fff;
+  line-height: 1.15;
 }
