@@ -1,0 +1,116 @@
+@use '../../styles/vars.scss';
+@use '../../styles/mixins.scss';
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-bottom: 40px;
+  &-disabled {
+    opacity: 0.4;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
+  &__info {
+    position: absolute;
+    right: 7px;
+    padding: 15px 17px;
+    font: 900 30px vars.$nekstFont;
+    line-height: 36px;
+    background: transparent;
+    border-radius: 16px;
+    &-box {
+      font-size: 20px;
+      line-height: 120%;
+      background: #EBEBEC;
+    }
+  }
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+  }
+  &__input-number {
+    width: 100%;
+    border-radius: 16px;
+    border: none;
+    border: 2px solid #F3F3F4;
+    background: #F3F3F4;
+    min-height: 30px;
+    appearance: textfield;
+    padding: 14px 70px 14px 22px;
+    font: 900 30px vars.$nekstFont;
+    line-height: 36px;
+    color: #575757;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+    &:focus {
+      outline: none;  
+      background: #fff;
+    }
+  }
+  
+  &__input-range {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    cursor: pointer;
+    width: 90%;
+    appearance: none;
+    border-radius: 20px 20px 0 0;
+    height: 2px;
+    outline: none;
+    transition: 0.2s;
+    background: linear-gradient(90deg, #FF9514 100%, #E1E1E1 0%);
+    &:hover {
+      &::-webkit-slider-thumb {
+        height: 24px;
+        width: 24px;
+      }
+      &::-moz-range-thumb {
+        height: 24px;
+        width: 24px;
+      }
+    }
+    &:focus {
+      &::-webkit-slider-thumb {
+        height: 24px;
+        width: 24px;
+      }
+      &::-moz-range-thumb {
+        height: 24px;
+        width: 24px;
+      }
+    }
+    &::-moz-range-track {
+      border: 8px solid transparent;
+    }
+    &::-webkit-slider-thumb {
+      appearance: none;
+      border: none;
+      border-radius: 50%;
+      background: #FF9514;
+      height: 20px;
+      width: 20px;
+    }
+    &::-moz-range-thumb {
+      appearance: none;
+      border: none;
+      border-radius: 50%;
+      background: #FF9514;
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
