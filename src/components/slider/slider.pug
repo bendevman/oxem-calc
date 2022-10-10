@@ -1,0 +1,11 @@
+mixin slider({name='slider',title='title',info='₽',persent=0,min=1,max=60})
+  label.slider 
+    span.slider__title= title 
+    span.slider__controls
+      input(type="number", name=name,min=min,max=max).slider__input-number
+      if (persent) 
+        span.slider__info.slider__info-box= persent+info
+      else 
+        span.slider__info= info
+      input(type="range", name="range",min=min,max=max).slider__input-range
+      

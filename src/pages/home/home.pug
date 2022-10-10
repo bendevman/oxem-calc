@@ -1,6 +1,7 @@
 extends ../../layouts/layout
 include ../../components/btn/btn
 include ../../components/info-box/info-box
+include ../../components/slider/slider
 
 block variables
   - const btnText = 'Оставить заявку'
@@ -8,6 +9,27 @@ block title
   title Home
   meta(name="description", content="Car leasing calculator")
 block main
+  +slider({
+    name:'slider',
+    title:'Стоимость автомобиля',
+    info:'%',
+    min:1000000,
+    max:6000000,
+    persent: 10
+  }) 
+  +slider({
+    name:'slider',
+    title:'Стоимость автомобиля',
+    info:'мес.',
+    min:1000000,
+    max:6000000,
+  })  
+  +info-box({
+    infoBoxTitle:'Сумма договора лизинга',
+    infoBoxValue:"4 467 313 ₽"
+  })
+  +info-box({
+    infoBoxTitle:'Сумма договора лизинга',
+    infoBoxValue:"4 467 313 ₽"
+  })
   +btn(btnText)
-  +info-box({infoBoxTitle:'Сумма договора лизинга',infoBoxValue:"4 467 313 ₽"})
-  
