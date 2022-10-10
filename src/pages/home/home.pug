@@ -1,35 +1,56 @@
 extends ../../layouts/layout
-include ../../components/btn/btn
-include ../../components/info-box/info-box
-include ../../components/slider/slider
+include ../../components/calc/calc
+
 
 block variables 
+  -
+    const title = 'лизинг калькулятор'
+          description = 'лизинг калькулятор'
+          keywords = 'лизинг калькулятор'
 
-block title
-  title Home
-  meta(name="description", content="Car leasing calculator")
 block main
-  +slider({
-    name:'slider',
-    title:'Стоимость автомобиля',
-    info:'%',
-    min:1000000,
-    max:6000000,
-    persent: 10
-  }) 
-  +slider({
-    name:'slider',
-    title:'Стоимость автомобиля',
-    info:'мес.',
-    min:1000000,
-    max:6000000,
-  })  
-  +info-box({
-    infoBoxTitle:'Сумма договора лизинга',
-    infoBoxValue:"4 467 313 ₽"
-  })
-  +info-box({
-    infoBoxTitle:'Сумма договора лизинга',
-    infoBoxValue:"4 467 313 ₽"
-  })
-  +btn({type:'submit',btnText:'Оставить заявку'})
+  .section
+    +calc({
+      title: 'Рассчитайте стоимость автомобиля в лизинг',
+      link:'https://hookb.in/eK160jgYJ6UlaRPldJ1P',
+      sliderList:[
+        {
+          name:'car_coast',
+          title:'Стоимость автомобиля',
+          info:'₽',
+          min:1000000,
+          max:6000000,
+        },
+        {
+          name:'initail_payment',
+          title:'Первоначальный взнос',
+          info:'%',
+          min:10,
+          max:60,
+          persent:13
+        },
+        {
+          name:'lease_term',
+          title:'Срок лизинга',
+          info:'мес.',
+          min:1,
+          max:60,
+        }
+      ],
+      infoBoxList:[
+        {
+          infoBoxTitle:'Сумма договора лизинга',
+          infoBoxValue:"4 467 313 ₽"
+        },
+        {
+          infoBoxTitle:'Ежемесячный платеж от',
+          infoBoxValue:"114 455 ₽"
+        }
+      ],
+      btn:
+        {
+          name:'sub',
+          type:'submit',
+          btnText:'Оставить заявку'
+        }
+    })

@@ -1,0 +1,14 @@
+include ../slider/slider
+
+mixin sliders({sliderList=[]})
+  ul.sliders__list
+      each sliderItem in sliderList
+        li.sliders__item
+          +slider({
+            name:sliderItem.name,
+            title:sliderItem.title,
+            info:sliderItem.info,
+            persent:sliderItem.persent,
+            min:sliderItem.min,
+            max:sliderItem.max
+          })

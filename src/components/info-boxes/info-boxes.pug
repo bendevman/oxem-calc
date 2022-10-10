@@ -1,0 +1,13 @@
+include ../info-box/info-box
+include ../btn/btn
+
+
+mixin info-boxes({btn,infoBoxList=[]})
+  ul.info-boxes__list
+    each infoBoxItem in infoBoxList
+      li.info-boxes__item
+        +info-box({
+          infoBoxTitle:infoBoxItem.infoBoxTitle,
+          infoBoxValue:infoBoxItem.infoBoxValue
+        })
+    +btn(btn)

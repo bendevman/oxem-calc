@@ -1,0 +1,11 @@
+include ../sliders/sliders
+include ../info-boxes/info-boxes
+include ../btn/btn
+
+mixin calc({title='Рассчитайте стоимость',link='#',sliderList=sliderList,infoBoxList=infoBoxList,btn=btn})
+  .calc 
+    form(action=link, method="post").calc-form
+      .calc-inner
+        span.calc__heading= title 
+        +sliders({sliderList})
+        +info-boxes({btn,infoBoxList})

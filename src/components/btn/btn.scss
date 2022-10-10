@@ -7,6 +7,8 @@
   align-items: center;
   background: vars.$btnBGColor;
   border: none;
+  max-height: 68px;
+  flex: 1;
   border-radius: 40px;
   padding: 14px 30px 18px;
   cursor: pointer;

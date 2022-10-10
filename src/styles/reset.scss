@@ -4,3 +4,22 @@ html,body {
 *,*:before,*:after {
   box-sizing: border-box;
 }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+p {
+	margin: 0;
+}
+a,img {
+  display: inline-block;
+}
+h1,h2,h3,h4,h5 {
+  margin: 0;
+  font-weight: normal;
+}

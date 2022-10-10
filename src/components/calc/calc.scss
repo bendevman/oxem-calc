@@ -1,0 +1,18 @@
+@use '../../styles/vars.scss';
+@use '../../styles/mixins.scss';
+
+.calc {
+  padding: 48px;
+  padding-top: 60px;
+  &-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__heading {
+    font: 900 54px vars.$nekstFont;
+    line-height: 90%;
+    color: #111111;
+    margin-bottom: 30px;
+    width: 50%;
+  }
+}

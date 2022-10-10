@@ -6,3 +6,11 @@ html {
   background: #fff;
   line-height: 1.15;
 }
+.section{
+  padding: 0 calc(50% - 710px);
+}
+@media (max-width: 1440px){
+  .section {
+    padding: 0 10px;
+  }
+} 
