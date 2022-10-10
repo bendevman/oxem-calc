@@ -10,4 +10,5 @@ mixin info-boxes({btn,infoBoxList=[]})
           infoBoxTitle:infoBoxItem.infoBoxTitle,
           infoBoxValue:infoBoxItem.infoBoxValue
         })
-    +btn(btn)
+    li.info-boxes__item
+      +btn(btn)

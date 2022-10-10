@@ -4,10 +4,14 @@
 .info-boxes {
   &__list {
     display: flex;
-    gap: 60px;
+    gap: 55px;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__item {
+    display: flex;
     flex: 1;
+    min-width: 345px;
+
   }
 }
