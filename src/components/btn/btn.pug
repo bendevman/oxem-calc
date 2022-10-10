@@ -1,4 +1,4 @@
-mixin btn(btnText='btn')
-  button(type="submit").btn
+mixin btn({type='button',btnText='btn'})
+  button(type=type).btn
     span.btn__text= btnText
     span.btn__loader

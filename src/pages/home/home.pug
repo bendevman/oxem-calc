@@ -3,8 +3,8 @@ include ../../components/btn/btn
 include ../../components/info-box/info-box
 include ../../components/slider/slider
 
-block variables
-  - const btnText = 'Оставить заявку'
+block variables 
+
 block title
   title Home
   meta(name="description", content="Car leasing calculator")
@@ -32,4 +32,4 @@ block main
     infoBoxTitle:'Сумма договора лизинга',
     infoBoxValue:"4 467 313 ₽"
   })
-  +btn(btnText)
+  +btn({type:'submit',btnText:'Оставить заявку'})
