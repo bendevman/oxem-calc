@@ -14,6 +14,10 @@ const sliders = document.querySelectorAll('.slider'),
       btn = document.querySelector('[name="sub"]')
 
 /////////////////////////////////////////
+function SetRangeColor(rangeInput){
+  let thumLocation = (rangeInput.value - rangeInput.getAttribute('min')) * 100 / (rangeInput.getAttribute('max')- rangeInput.getAttribute('min'))
+  rangeInput.style.background = `linear-gradient(90deg, #FF9514 ${thumLocation}%, #E1E1E1 ${thumLocation}%)` 
+}
 function ruCurrency(value){
   return new Intl.NumberFormat('ru-RU', { 
     style: 'currency',
@@ -31,8 +35,6 @@ function monthPayment(){
   return Math.round(monthCost)
 }
 function totalPayment(initalPayment,months,monthPayment){
-  
-  console.log('sum') 
   return initalPayment + months * monthPayment
 }
 ///////////////////////////////////////////
@@ -43,8 +45,11 @@ totalPay.value = ruCurrency(totalPayment(initialPayment(),months.value,monthPaym
 sliders.forEach(el => {
   let numInput = el.querySelector('.slider__input-number'),
       rangeInput = el.querySelector('.slider__input-range'),
-      info = el.querySelector('.slider__info')
-
+      info = el.querySelector('.slider__info'),
+      foo = (rangeInput.value - rangeInput.getAttribute('min')) * 100 / (rangeInput.getAttribute('max')- rangeInput.getAttribute('min'))
+  
+  SetRangeColor(rangeInput)
+  rangeInput.style.background = `linear-gradient(90deg, #FF9514 ${foo}%, #E1E1E1 ${foo}%)`      
   numInput.addEventListener('input',()=>{
     rangeInput.value=numInput.value 
     monthPay.value = rangeInput.value
@@ -61,6 +66,7 @@ sliders.forEach(el => {
     monthPay.value = ruCurrency(monthPayment())
     totalPay.value = ruCurrency(totalPayment(initialPayment(),months.value,monthPayment()))
     // console.log(numInput.value, rangeInput.value)
+    SetRangeColor(rangeInput)
   })
 });
 
