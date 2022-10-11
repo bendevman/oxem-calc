@@ -2,9 +2,9 @@ mixin slider({name='slider',title='title',info='₽',value=3330000,persent=0,min
   label.slider 
     span.slider__title= title 
     span.slider__controls
-      if (info == '%') 
+      if (info === '%') 
         input(type="number",name=name,min=min,max=max).slider__input-number
-        span.slider__info.slider__info-box= value+info
+        span(name=`${name}-info`).slider__info.slider__info-box= value+info
       else 
         input(type="number",name=name,value=value,min=min,max=max).slider__input-number
         span.slider__info= info

@@ -13,6 +13,9 @@
     font: 900 54px vars.$nekstFont;
     line-height: 90%;
     color: vars.$blackTextColor;
+    width: 100%;
+    border: none;
+    background: transparent;
   }
   &-sm {
     .info-box {

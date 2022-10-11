@@ -1,4 +1,4 @@
-mixin info-box({infoBoxTitle='Title',infoBoxValue=3333})
-  .info-box 
+mixin info-box({infoBoxTitle='Title',infoBoxName='info-box'})
+  label.info-box 
     span.info-box__title= infoBoxTitle
-    span.info-box__value= infoBoxValue
+    input(type="text", name=infoBoxName,disabled).info-box__value

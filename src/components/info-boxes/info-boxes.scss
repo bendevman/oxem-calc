@@ -4,7 +4,7 @@
 .info-boxes {
   &__list {
     display: flex;
-    gap: 55px;
+    gap: 30px;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -12,6 +12,5 @@
     display: flex;
     flex: 1;
     min-width: 345px;
-
   }
 }

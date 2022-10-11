@@ -9,58 +9,16 @@ html {
 }
 .section {
   padding: 0 10px;
-}
-// @media (max-width: 1440px){
-//   .section {
-//     padding: 0 calc(50% - 560px);
-
-//   }
-// } 
-// @media (max-width: 1120px){
-//   .section {
-//     padding: 0 calc(50% - 384px);
-
-//   }
-// } 
-// @media (max-width: 768px){
-//   .section {
-//     padding: 0 calc(50% - 160px);
-
-//   }
-// } 
-// @include mixins.lg {
-//   .section {
-//     padding: 0 calc(50% - 560px);
-//   }
-// }
-// @include mixins.md {
-//   .section {
-//     padding: 0 calc(50% - 384px);
-//   }
-// }
-// @include mixins.sm {
-//   .section {
-//     padding: 0 calc(50% - 160px);
-//   }
-// }
-
-@include mixins.xs {
-  .section {
+  @include mixins.xs {
     padding: 0 calc(50% - 160px);
   }
-}
-@include mixins.sm {
-  .section {
+  @include mixins.sm {
     padding: 0 calc(50% - 384px);
   }
-}
-@include mixins.md {
-  .section {
+  @include mixins.md {
     padding: 0 calc(50% - 560px);
   }
-}
-@include mixins.lg {
-  .section {
+  @include mixins.lg {
     padding: 0 calc(50% - 720px);
   }
 }
