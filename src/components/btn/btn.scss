@@ -8,7 +8,7 @@
   background: vars.$btnBGColor;
   border: none;
   max-height: 68px;
-  flex: 1;
+  width: 100%;
   border-radius: 40px;
   padding: 14px 20px 18px;
   cursor: pointer;
@@ -17,14 +17,12 @@
     color: vars.$btnTextColor;
     font: 900 vars.$btnTextSize-md vars.$nekstFont;
     line-height: vars.$btnLineHeight-md;
-  }
-  &-sm {
-    padding: 18px 30px 22px;
-    .btn__text {
-      font-size: vars.$btnTextSize-sm;
-      line-height: vars.$btnLineHeight-sm;
+    @include mixins.sm {
+      font-size: 22px;
+      line-height: 20px;
     }
   }
+  
   &-disabled {
     background: rgba(255, 149, 20, 0.4);
   }

@@ -13,6 +13,12 @@
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 24px;
+    @include mixins.sm {
+      font-size: 14px;
+      line-height: 136%;
+      margin-bottom: 8px;
+
+    }
   }
   &__info {
     position: absolute;
@@ -22,10 +28,18 @@
     line-height: 36px;
     background: transparent;
     border-radius: 16px;
+    @include mixins.sm {
+      font-size: 22px;
+      line-height: 20px;
+    }
     &-box {
       font-size: 20px;
       line-height: 120%;
       background: #EBEBEC;
+      @include mixins.sm {
+        font-size: 22px;
+        line-height: 20px;
+      }
     }
   }
   &__controls {
@@ -49,6 +63,10 @@
     font: 900 30px vars.$nekstFont;
     line-height: 36px;
     color: #575757;
+    @include mixins.sm {
+      font-size: 22px;
+      line-height: 20px;
+    }
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {

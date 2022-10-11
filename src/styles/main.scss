@@ -9,16 +9,14 @@ html {
 }
 .section {
   padding: 0 10px;
-  @include mixins.xs {
-    padding: 0 calc(50% - 160px);
-  }
-  @include mixins.sm {
-    padding: 0 calc(50% - 384px);
-  }
-  @include mixins.md {
+
+  @include mixins.lg {
     padding: 0 calc(50% - 560px);
   }
-  @include mixins.lg {
-    padding: 0 calc(50% - 720px);
+  @include mixins.md {
+    padding: 0 calc(50% - 384px);
+  }
+  @include mixins.sm {
+    padding: 0 calc(50% - 160px);
   }
 }

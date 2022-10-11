@@ -6,31 +6,31 @@
 
 //responsive
 @mixin xl {
-	@media screen and (min-width: 1600px) {
+	@media screen and (max-width: 1600px) {
 		@content;
 	}
 }
 
 @mixin lg {
-	@media screen and (min-width: 1440px) {
+	@media screen and (max-width: 1439px) {
 		@content;
 	}
 }
 
 @mixin md {
-	@media screen and (min-width: 1120px) {
+	@media screen and (max-width: 1119px) {
 		@content;
 	}
 }
 
 @mixin sm {
-	@media screen and (min-width: 768px) {
+	@media screen and (max-width: 767px) {
 		@content;
 	}
 }
 
 @mixin xs {
-	@media screen and (min-width: 320px) {
+	@media screen and (max-width: 320px) {
 		@content;
 	}
 }

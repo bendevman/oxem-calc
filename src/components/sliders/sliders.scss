@@ -6,9 +6,9 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    // @include mixins.md {
-    //   background: #000;
-    // }
+    @include mixins.md {
+      flex-direction: column;
+    }
   }
   &__item {
     flex: 1;

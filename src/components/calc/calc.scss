@@ -4,6 +4,15 @@
 .calc {
   padding: 48px;
   padding-top: 60px;
+  @include mixins.md {
+    padding: 36px;
+    padding-top: 60px;
+  }
+  @include mixins.sm {
+    padding: 20px;
+    padding-top: 40px;
+  }
+  
   &-inner {
     display: flex;
     flex-direction: column;
@@ -13,6 +22,14 @@
     line-height: 90%;
     color: #111111;
     margin-bottom: 30px;
-    width: 70%;
+    width: 65%;
+    @include mixins.md {
+      width: 100%;
+    }
+    @include mixins.sm {
+      font-size: 34px;
+      line-height: 90%
+    }
   }
+  
 }

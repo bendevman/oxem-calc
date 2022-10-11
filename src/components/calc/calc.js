@@ -54,6 +54,8 @@ sliders.forEach(el => {
     rangeInput.value=numInput.value 
     monthPay.value = rangeInput.value
     // console.log(numInput.value, rangeInput.value)
+    SetRangeColor(rangeInput)
+
   })
   rangeInput.addEventListener('input',()=>{
     if (info.classList.contains('slider__info-box')) {
