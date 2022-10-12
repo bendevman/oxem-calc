@@ -37,6 +37,43 @@ function monthPayment(){
 function totalPayment(initalPayment,months,monthPayment){
   return initalPayment + months * monthPayment
 }
+
+async function send() {
+  try {
+    fetch('https://hookb.in/eK160jgYJ6UlaRPldJ1P',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body:  JSON.stringify({
+          "car_coast": 4000000,
+          "initail_payment": 400000,
+          "initail_payment_percent": 10,
+          "lease_term": 24,
+          "total_sum": 5000000,
+          "monthly_payment_from": 30000
+        })
+      }).then(res =>{
+        console.log(res.json())
+      })
+  } catch (error) {
+    console.log('error:'+ error) 
+    
+  }
+  
+
+  
+
+  // try {
+  //   console.log("start")
+  //   const response = await fetch('https://dog.ceo/api/breeds/list/all'),
+  //       data = await response.json()
+  //   console.log(data)
+  // } catch (error) {
+  //   console.log('error:'+error) 
+  // }
+  
+}
 ///////////////////////////////////////////
 initial.value = initialPayment()
 monthPay.value = ruCurrency(monthPayment())
@@ -74,6 +111,8 @@ sliders.forEach(el => {
 
 btn.addEventListener('click',(e)=>{
   e.preventDefault()
+  send()
+  
 })
 
 
