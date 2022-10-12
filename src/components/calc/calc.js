@@ -13,6 +13,14 @@ const sliders = document.querySelectorAll('.slider'),
       months = document.querySelector('[name="months"]'),
       btn = document.querySelector('[name="sub"]')
 
+let data = {
+  car_coast: price.value,
+  initail_payment: initial.value,
+  initail_payment_percent: initialPersent.value,
+  lease_term: months.value,
+  total_sum: totalPay.value,
+  monthly_payment_from: monthPay.value
+}
 /////////////////////////////////////////
 function SetRangeColor(rangeInput){
   let thumLocation = (rangeInput.value - rangeInput.getAttribute('min')) * 100 / (rangeInput.getAttribute('max')- rangeInput.getAttribute('min'))
@@ -38,21 +46,14 @@ function totalPayment(initalPayment,months,monthPayment){
   return initalPayment + months * monthPayment
 }
 
-async function send() {
+async function send(data) {
   try {
     fetch('https://hookb.in/eK160jgYJ6UlaRPldJ1P',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body:  JSON.stringify({
-          "car_coast": 4000000,
-          "initail_payment": 400000,
-          "initail_payment_percent": 10,
-          "lease_term": 24,
-          "total_sum": 5000000,
-          "monthly_payment_from": 30000
-        })
+      body:  JSON.stringify(data)
       }).then(res =>{
         console.log(res.json())
       })
@@ -60,18 +61,6 @@ async function send() {
     console.log('error:'+ error) 
     
   }
-  
-
-  
-
-  // try {
-  //   console.log("start")
-  //   const response = await fetch('https://dog.ceo/api/breeds/list/all'),
-  //       data = await response.json()
-  //   console.log(data)
-  // } catch (error) {
-  //   console.log('error:'+error) 
-  // }
   
 }
 ///////////////////////////////////////////
@@ -101,18 +90,26 @@ sliders.forEach(el => {
     }else{
       numInput.value = rangeInput.value
     }
+    
     initial.value = initialPayment()
     monthPay.value = ruCurrency(monthPayment())
     totalPay.value = ruCurrency(totalPayment(initialPayment(),months.value,monthPayment()))
     // console.log(numInput.value, rangeInput.value)
+    data = {
+      car_coast: price.value,
+      initail_payment: initial.value,
+      initail_payment_percent: initialPersent.value,
+      lease_term: months.value,
+      total_sum: totalPay.value,
+      monthly_payment_from: monthPay.value
+    }
     SetRangeColor(rangeInput)
   })
 });
 
 btn.addEventListener('click',(e)=>{
   e.preventDefault()
-  send()
-  
+  send(data)
 })
 
 
