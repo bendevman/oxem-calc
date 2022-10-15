@@ -20,7 +20,7 @@ let data = {
   lease_term: months.value,
   total_sum: totalPay.value,
   monthly_payment_from: monthPay.value
-}
+} 
 /////////////////////////////////////////
 function SetRangeColor(rangeInput){
   let thumLocation = (rangeInput.value - rangeInput.getAttribute('min')) * 100 / (rangeInput.getAttribute('max')- rangeInput.getAttribute('min'))
