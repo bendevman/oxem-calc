@@ -1,0 +1,45 @@
+{
+  "title":"Рассчитайте стоимость автомобиля в лизинг",
+  "link":"https://hookb.in/eK160jgYJ6UlaRPldJ1P",
+  "sliderList":[
+    {
+      "name":"price",
+      "title":"Стоимость автомобиля",
+      "info":"₽",
+      "value":1500000,
+      "min":1000000,
+      "max":6000000
+    },
+    {
+      "name":"initial",
+      "title":"Первоначальный взнос",
+      "info":"%",
+      "value":13,
+      "min":10,
+      "max":60
+    },
+    {
+      "name":"months",
+      "title":"Срок лизинга",
+      "info":"мес.",
+      "value":12,
+      "min":1,
+      "max":60
+    }
+  ],
+  "infoBoxList":[
+    {
+      "infoBoxTitle":"Сумма договора лизинга",
+      "infoBoxName":"totalPay"
+    },
+    {
+      "infoBoxTitle":"Ежемесячный платеж от",
+      "infoBoxName":"monthPay"
+    }
+  ],
+  "btn":{
+    "name":"sub",
+    "type":"submit",
+    "btnText":"Оставить заявку"
+  }
+}
